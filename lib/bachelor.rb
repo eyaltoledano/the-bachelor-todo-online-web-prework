@@ -53,8 +53,7 @@ def get_average_age_for_season(data, season)
       end
     end
   end
-  average = contestant_ages.inject(0.0) { |sum, i| sum + i }.to_f / contestant_ages.size
-
   binding.pry
-
+  age_sum = contestant_ages.inject(0) { |sum, i| sum + i }
+  average = age_sum / contestant_ages.size
 end
